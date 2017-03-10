@@ -4,13 +4,14 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="page-wrapper">
     <!-- page-header -->
     <header class="page-header">
       <div class="container">
         <a class="logo" href="index.html">
-          <img src="http://placehold.it/86x35" width="86" height="35" alt="Мишка">
+          <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
         </a>
         <nav class="main-menu">
           <button class="main-menu__button  main-menu__button--open" type="button" title="Открыть/закрыть меню">Меню</button>
@@ -19,7 +20,7 @@
               <a class="main-menu__link" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="main-menu__item">
-              <a class="main-menu__link" href="#">Вязание на заказ</a>
+              <a class="main-menu__link">Вязание на заказ</a>
             </li>
             <li class="main-menu__item">
               <a class="main-menu__link  main-menu__link--search" href="#">Поиск по сайту</a>
@@ -31,8 +32,6 @@
         </nav>
       </div>
     </header><!-- page-header end -->
-
-
 
     <!-- order -->
     <main class="order">
@@ -85,7 +84,7 @@
           </fieldset>
 
           <fieldset class="order-form__field-group">
-            <legend class="order-form__field-group-title">ФИО</legend>
+            <legend class="order-form__field-group-title  order-form__field-group-title--big-margin">ФИО</legend>
             <div class="order-form__text-field">
               <label for="first-name">Имя:</label>
               <input class="text-field" type="text" id="first-name" name="first-name" placeholder="Введите ваше имя*" required>
@@ -100,8 +99,8 @@
             </div>
           </fieldset>
 
-          <fieldset class="order-form__field-group">
-            <legend class="order-form__field-group-title">Тел</legend>
+          <fieldset class="order-form__field-group  order-form__field-group--margin">
+            <legend class="order-form__field-group-title  order-form__field-group-title--small-margin">Тел</legend>
             <div class="order-form__text-field">
               <input class="text-field text-field--tel" type="tel" id="tel" name="tel" pattern="\+[0-9]{1} [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
             </div>
@@ -114,7 +113,7 @@
             </div>
           </fieldset>
 
-          <fieldset class="order-form__field-group">
+          <fieldset class="order-form__field-group  order-form__field-group--margin">
             <legend class="order-form__field-group-title">Доп</legend>
             <div class="order-form__big-text-field">
               <textarea class="big-text-field" id="extra-wishes" name="extra-wishes" placeholder="Опишите все ваши  пожелания к заказу" rows="5"></textarea>
