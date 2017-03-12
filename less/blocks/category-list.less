@@ -1,0 +1,47 @@
+.category-list {
+  .ul-reset();
+  margin-top: 46px;
+}
+
+.category-list__link {
+  position: relative;
+  display: block;
+  padding: 0 30px;
+  padding-top: 25px;
+  padding-bottom: 29px;
+  font-size: 19px;
+  line-height: 24px;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+
+  &--furnishings {
+    background-color: #63d1bb;
+
+    &::after {
+      .pseudo();
+      top: 50%;
+      right: 36px;
+      width: 41px;
+      height: 62px;
+      transform: translateY(-50%);
+      background-image: url("../img/icon-interior.svg");
+      opacity: 0.5;
+    }
+  }
+
+  &--toys {
+    background-color: #56c3b2;
+
+    &::after {
+      .pseudo();
+      top: 50%;
+      right: 26px;
+      width: 61px;
+      height: 61px;
+      transform: translateY(-50%);
+      background-image: url("../img/icon-toy.svg");
+      opacity: 0.5;
+    }
+  }
+}

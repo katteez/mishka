@@ -1,0 +1,25 @@
+.clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.ul-reset() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pseudo() {
+  position: absolute;
+  content: "";
+  display: block;
+}
+.block-title-text() {
+  margin: 0;
+  font-size: 25px;
+  line-height: 30px;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  color: @title-text-color;
+}

@@ -1,0 +1,74 @@
+.about-us {
+  padding-top: 30px;
+  padding-bottom: 34px;
+  background-color: #ffffff;
+}
+
+.about-us__title {
+  .block-title-text();
+  margin-bottom: 32px;
+}
+
+.about-us__features-list {
+  .ul-reset();
+}
+
+.about-us__feature {
+  position: relative;
+  margin-bottom: 30px;
+  padding-top: 53px;
+  font-size: 17px;
+  line-height: 20px;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  color: @title-text-color;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::after {
+    .pseudo();
+    width: 55px;
+    height: 38px;
+    top: 0;
+    left: -7px;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+
+  &--eco {
+    &::after {
+      background-image: url("../img/icon-feature-1.svg");
+    }
+  }
+
+  &--price {
+    &::after {
+      background-image: url("../img/icon-feature-3.svg");
+    }
+  }
+
+  &--heart {
+    &::after {
+      background-image: url("../img/icon-feature-5.svg");
+    }
+  }
+
+  &--knitting {
+    &::after {
+      background-image: url("../img/icon-feature-2.svg");
+    }
+  }
+
+  &--rocket {
+    &::after {
+      background-image: url("../img/icon-feature-4.svg");
+    }
+  }
+
+  &--present {
+    &::after {
+      background-image: url("../img/icon-feature-6.svg");
+    }
+  }
+}
