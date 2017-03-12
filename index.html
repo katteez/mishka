@@ -32,9 +32,11 @@
       </div>
     </header><!-- page-header end -->
 
-    <maisn class="main-page-content">
+    <main class="main-page-content">
       <div class="intro  intro--main-page">
-        <h1 class="intro__title">Милые штуки ручной  работы для дома</h1>
+        <div class="container">
+          <h1 class="intro__title">Милые штуки ручной  работы для дома</h1>
+        </div>
       </div>
       <ul class="category-list">
         <li class="category-list__item">
@@ -53,20 +55,20 @@
           <p class="product__description">
             Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
           </p>
-          <table class="product__characteristics">
-            <tr>
-              <td class="product__characteristic">Цвет:</td>
-              <td class="product__definition">«Тиффани»/серый</td>
-            </tr>
-            <tr>
-              <td class="product__characteristic">Диаметр:</td>
-              <td class="product__definition">25 см</td>
-            </tr>
-            <tr>
-              <td class="product__characteristic">Высота:</td>
-              <td class="product__definition">15 см</td>
-            </tr>
-          </table>
+          <dl class="product__characteristics">
+            <div class="product__item">
+              <dt class="product__characteristic">Цвет:</dt>
+              <dd class="product__definition">«Тиффани»/серый</dd>
+            </div>
+            <div class="product__item">
+              <dt class="product__characteristic">Диаметр:</dt>
+              <dd class="product__definition">25 см</dd>
+            </div>
+            <div class="product__item">
+              <dt class="product__characteristic">Высота:</dt>
+              <dd class="product__definition">15 см</dd>
+            </div>
+          </dl>
           <img class="product__picture" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
           <div class="product__price">Цена: 990 руб.</div>
           <a class="button" href="#" title="Заказать товар">Заказать</a>
@@ -121,7 +123,9 @@
             <dd class="contacts__definition  contacts__definition--narrow">г. Санкт-Петербург, ул. Большая Конюшенная,<br>д. 19/8, офис 101</dd>
           </dl>
         </div>
-        <div class="contacts__map"></div>
+        <div class="contacts__map">
+          <div class="container"></div>
+        </div>
         <div class="container">
           <a class="button" href="feedback-create.html">Напишите нам</a>
         </div>
@@ -140,7 +144,7 @@
               <a class="social-link  social-link--twitter" href="#" title="Twitter">Twitter</a>
             </li>
           </ul>
-          <div class="copyright">Разработано <a class="copyright__author-link" href="https://htmlacademy.ru" target="_blank">html academy</a></div>
+          <div class="page-footer__copyright">Разработано <a class="page-footer__copyright-author-link" href="https://htmlacademy.ru" target="_blank">html academy</a></div>
         </div>
       </div>
     </footer><!-- page-footer end -->
@@ -148,14 +152,14 @@
     <!-- modal add-to-cart -->
     <div class="modal  modal--add-to-cart">
       <h2 class="modal__title">Добавить в корзину</h2>
-      <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+      <form class="form" action="https://echo.htmlacademy.ru/" method="post">
         <p>Выберите размер:</p>
         <input type="checkbox" id="s-size" name="s-size">
-        <label class="modal-form__label" for="s-size">S</label>
+        <label class="form__label" for="s-size">S</label>
         <input type="checkbox" id="m-size" name="m-size">
-        <label class="modal-form__label" for="m-size">M</label>
+        <label class="form__label" for="m-size">M</label>
         <input type="checkbox" id="l-size" name="l-size">
-        <label class="modal-form__label" for="l-size">L</label>
+        <label class="form__label" for="l-size">L</label>
         <button class="button  button-modal" type="submit" title="Добавить в корзину">Добавить</button>
       </form>
     </div><!-- modal add-to-cart end -->
