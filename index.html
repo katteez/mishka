@@ -2,33 +2,49 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-wrapper">
     <!-- page-header -->
     <header class="page-header">
-      <div class="container">
+      <div class="container  page-header__container">
         <a class="logo">
           <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
         </a>
         <nav class="main-menu">
           <button class="main-menu__button  main-menu__button--open" type="button" title="Открыть/закрыть меню">Меню</button>
-          <ul class="main-menu__list">
-            <li class="main-menu__item">
-              <a class="main-menu__link" href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="main-menu__item">
-              <a class="main-menu__link" href="form.html">Вязание на заказ</a>
-            </li>
-            <li class="main-menu__item">
-              <a class="main-menu__link  main-menu__link--search" href="#">Поиск по сайту</a>
-            </li>
-            <li class="main-menu__item">
-              <a class="main-menu__link  main-menu__link--cart" href="#">Корзина: пока пуста</a>
-            </li>
-          </ul>
+          <div class="main-menu__container">
+            <ul class="main-menu__list  main-menu__list--main">
+              <li class="main-menu__item  main-menu__item--main">
+                <a class="main-menu__link  main-menu__link--main" href="catalog.html">Каталог товаров</a>
+              </li>
+              <li class="main-menu__item  main-menu__item--main">
+                <a class="main-menu__link  main-menu__link--main" href="form.html">Вязание на заказ</a>
+              </li>
+            </ul>
+
+            <ul class="main-menu__list  main-menu__list--extra">
+              <li class="main-menu__item  main-menu__item--extra">
+                <a class="main-menu__link  main-menu__link--extra" href="#">Новые поступления</a>
+              </li>
+              <li class="main-menu__item  main-menu__item--extra">
+                <a class="main-menu__link  main-menu__link--extra" href="#">Распродажа</a>
+              </li>
+            </ul>
+
+            <ul class="main-menu__list  main-menu__list--user">
+              <li class="main-menu__item">
+                <a class="main-menu__link  main-menu__link--user  main-menu__link--search" href="#">Поиск по сайту</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link  main-menu__link--user  main-menu__link--cart" href="#">Корзина: пока пуста</a>
+              </li>
+            </ul>
+          </div>
         </nav>
+        <span class="page-header__delivery">Бесплатная доставка по России</span>
       </div>
     </header><!-- page-header end -->
 
@@ -49,7 +65,7 @@
 
       <!-- product -->
       <article class="product  product--hit">
-        <div class="container">
+        <div class="container  product__container">
           <h2 class="product__name">Вязаные корзинки</h2>
           <h3 class="product__mark">Товар недели</h3>
           <p class="product__description">
@@ -71,7 +87,7 @@
           </dl>
           <img class="product__picture" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
           <div class="product__price">Цена: 990 руб.</div>
-          <a class="button" href="#" title="Заказать товар">Заказать</a>
+          <a class="button  product__button" href="#" title="Заказать товар">Заказать</a>
         </div>
       </article><!-- product end -->
 
@@ -80,19 +96,23 @@
         <div class="container">
           <h2 class="about-us__title">Коротко о нас:</h2>
           <ul class="about-us__features-list">
-            <li class="about-us__feature  about-us__feature--eco">Экологически чистые материалы</li>
-            <li class="about-us__feature  about-us__feature--price">Скандинавский стиль по российской цене</li>
-            <li class="about-us__feature  about-us__feature--heart">Увеличивает лайки на фотографиях</li>
-            <li class="about-us__feature  about-us__feature--knitting">Связано вручную с любовью и умилением</li>
-            <li class="about-us__feature  about-us__feature--rocket">Поддержка отечественного производителя</li>
-            <li class="about-us__feature  about-us__feature--present">Поставляется в подарочной упаковке</li>
+            <div class="about-us__column">
+              <li class="about-us__feature  about-us__feature--eco">Экологически чистые материалы</li>
+              <li class="about-us__feature  about-us__feature--price">Скандинавский стиль по российской цене</li>
+              <li class="about-us__feature  about-us__feature--heart">Увеличивает лайки на фотографиях</li>
+            </div>
+            <div class="about-us__column">
+              <li class="about-us__feature  about-us__feature--knitting">Связано вручную с любовью и умилением</li>
+              <li class="about-us__feature  about-us__feature--rocket">Поддержка отечественного производителя</li>
+              <li class="about-us__feature  about-us__feature--present">Поставляется в подарочной упаковке</li>
+            </div>
           </ul>
         </div>
       </section><!-- about-us end -->
 
       <!-- reviews -->
       <section class="reviews">
-        <div class="container">
+        <div class="container  reviews__container">
           <h2 class="reviews__title">Отзывы</h2>
           <figure class="reviews__item">
             <blockquote class="reviews__text">
@@ -105,7 +125,7 @@
             <button class="reviews__toggle  reviews__toggle--prev" type="button" title="Предыдущий отзыв">Предыдущий отзыв</button>
             <button class="reviews__toggle  reviews__toggle--next" type="button" title="Следующий отзыв">Следующий отзыв</button>
           </div>
-          <a class="button" href="review-create.html" title="Написать отзыв">Написать</a>
+          <a class="button  reviews__button" href="review-create.html" title="Написать отзыв">Написать</a>
         </div>
       </section><!-- reviews end -->
     </main>
@@ -117,22 +137,31 @@
         <div class="container">
           <h2 class="contacts__title">Контакты</h2>
           <dl class="contacts__info">
-            <dt class="contacts__term">e-mail:</dt>
-            <dd class="contacts__definition"><a class="link contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
-            <dt class="contacts__term">адрес:</dt>
-            <dd class="contacts__definition  contacts__definition--narrow">г. Санкт-Петербург, ул. Большая Конюшенная,<br>д. 19/8, офис 101</dd>
+            <div class="contacts__data">
+              <dt class="contacts__term">e-mail:</dt>
+              <dd class="contacts__definition">
+                <a class="link contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+              </dd>
+            </div>
+            <div class="contacts__data">
+              <dt class="contacts__term">адрес:</dt>
+              <dd class="contacts__definition  contacts__definition--narrow">г. Санкт-Петербург, ул. Большая Конюшенная,<br>д. 19/8, офис 101</dd>
+            </div>
           </dl>
         </div>
         <div class="contacts__map">
           <div class="container"></div>
         </div>
         <div class="container">
-          <a class="button" href="feedback-create.html">Напишите нам</a>
+          <a class="button  contacts__button" href="feedback-create.html">Напишите нам</a>
         </div>
       </section><!-- contacts end -->
 
       <div class="page-footer__bottom">
-        <div class="container">
+        <div class="container  page-footer__float-container">
+          <a class="logo">
+            <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+          </a>
           <ul class="social-list">
             <li class="social-list__item">
               <a class="social-link  social-link--instagram" href="#" title="Instagram">Instagram</a>
@@ -144,7 +173,9 @@
               <a class="social-link  social-link--twitter" href="#" title="Twitter">Twitter</a>
             </li>
           </ul>
-          <div class="page-footer__copyright">Разработано <a class="page-footer__copyright-author-link" href="https://htmlacademy.ru" target="_blank">html academy</a></div>
+          <div class="page-footer__copyright">Разработано
+            <a class="page-footer__copyright-author-link" href="https://htmlacademy.ru" target="_blank"> html academy</a>
+          </div>
         </div>
       </div>
     </footer><!-- page-footer end -->

@@ -6,20 +6,48 @@
   }
 }
 
+.container() {
+  width: 260px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @media @tablet-widths {
+    width: 668px;
+    padding: 0 50px;
+  }
+
+  @media @desktop-widths {
+    width: 1050px;
+    padding: 0 50px;
+  }
+}
+
 .ul-reset() {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 .pseudo() {
   position: absolute;
   content: "";
   display: block;
 }
+
 .block-title-text() {
   margin: 0;
   font-size: 25px;
   line-height: 30px;
   font-family: "Open Sans Bold", "Arial", sans-serif;
   color: @title-text-color;
+}
+
+.block-title-text--tablet() {
+  font-size: 43px;
+  line-height: 50px;
+}
+
+.block-title-text--desktop() {
+  font-size: 53px;
+  line-height: 57px;
 }
