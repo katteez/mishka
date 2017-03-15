@@ -8,27 +8,42 @@
   <body class="page-wrapper">
     <!-- page-header -->
     <header class="page-header">
-      <div class="container">
+      <div class="container  page-header__container">
         <a class="logo" href="index.html">
           <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
         </a>
         <nav class="main-menu">
           <button class="main-menu__button  main-menu__button--open" type="button" title="Открыть/закрыть меню">Меню</button>
-          <ul class="main-menu__list">
-            <li class="main-menu__item">
-              <a class="main-menu__link">Каталог товаров</a>
-            </li>
-            <li class="main-menu__item">
-              <a class="main-menu__link" href="form.html">Вязание на заказ</a>
-            </li>
-            <li class="main-menu__item">
-              <a class="main-menu__link  main-menu__link--search" href="#">Поиск по сайту</a>
-            </li>
-            <li class="main-menu__item">
-              <a class="main-menu__link  main-menu__link--cart" href="#">Корзина: пока пуста</a>
-            </li>
-          </ul>
+          <div class="main-menu__container">
+            <ul class="main-menu__list  main-menu__list--main">
+              <li class="main-menu__item  main-menu__item--main">
+                <a class="main-menu__link  main-menu__link--main">Каталог товаров</a>
+              </li>
+              <li class="main-menu__item  main-menu__item--main">
+                <a class="main-menu__link  main-menu__link--main" href="form.html">Вязание на заказ</a>
+              </li>
+            </ul>
+
+            <ul class="main-menu__list  main-menu__list--extra">
+              <li class="main-menu__item  main-menu__item--extra">
+                <a class="main-menu__link  main-menu__link--extra" href="#">Новые поступления</a>
+              </li>
+              <li class="main-menu__item  main-menu__item--extra">
+                <a class="main-menu__link  main-menu__link--extra" href="#">Распродажа</a>
+              </li>
+            </ul>
+
+            <ul class="main-menu__list  main-menu__list--user">
+              <li class="main-menu__item">
+                <a class="main-menu__link  main-menu__link--user  main-menu__link--search" href="#">Поиск по сайту</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link  main-menu__link--user  main-menu__link--cart" href="#">Корзина: пока пуста</a>
+              </li>
+            </ul>
+          </div>
         </nav>
+        <span class="page-header__delivery">Бесплатная доставка по России</span>
       </div>
     </header><!-- page-header end -->
 
@@ -39,7 +54,7 @@
           <h1 class="intro__title">Каталог товаров</h1>
         </div>
       </div>
-      <div class="container">
+      <div class="container  catalog__container">
         <article class="catalog-item">
           <a class="catalog-item__picture" href="#">
             <img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
@@ -91,7 +106,7 @@
             <h2 class="video-block__title">Процесс производства</h2>
           </div>
           <div class="video-block__video"></div>
-          <div class="video-block__container">
+          <div class="video-block__container  video-block__description">
             <p class="video-block__text">
               По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
             </p>
@@ -104,6 +119,9 @@
     <!-- page-footer -->
     <footer class="page-footer">
       <div class="container">
+        <a class="logo">
+          <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+        </a>
         <ul class="social-list">
           <li class="social-list__item">
             <a class="social-link  social-link--instagram" href="#" title="Instagram">Instagram</a>
@@ -115,7 +133,9 @@
             <a class="social-link  social-link--twitter" href="#" title="Twitter">Twitter</a>
           </li>
         </ul>
-        <div class="copyright">Разработано <a class="copyright__author-link" href="https://htmlacademy.ru" target="_blank">html academy</a></div>
+        <div class="page-footer__copyright">Разработано
+          <a class="page-footer__copyright-author-link" href="https://htmlacademy.ru" target="_blank"> html academy</a>
+        </div>
       </div>
     </footer><!-- page-footer end -->
 
