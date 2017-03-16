@@ -60,3 +60,59 @@
     background-image: url("../img/icon-right-arrow.svg");
   }
 }
+
+@media @tablet-widths {
+  .reviews {
+    margin-bottom: 75px;
+  }
+
+  .reviews__container {
+    .clearfix();
+    position: relative;
+  }
+
+  .reviews__title {
+    .block-title-text--tablet();
+    margin-bottom: 45px;
+  }
+
+  .reviews__text {
+    margin-bottom: 55px;
+    font-size: 17px;
+  }
+
+  .reviews__author {
+    float: left;
+    width: 300px;
+  }
+
+  .reviews__toggles {
+    float: right;
+  }
+
+  .reviews__toggle {
+    border: 0;
+  }
+
+  .reviews__button {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    width: 175px;
+  }
+}
+
+@media @desktop-widths {
+  .reviews__title {
+    .block-title-text--desktop();
+    margin-left: 175px;
+  }
+
+  .reviews__item {
+    margin-left: 175px;
+  }
+
+  .reviews__text {
+    width: 800px;
+  }
+}

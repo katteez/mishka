@@ -6,6 +6,10 @@
   }
 }
 
+.page-footer .logo {
+  display: none;
+}
+
 .page-footer__bottom{
   background-color: #f1f1f1;
 }
@@ -31,4 +35,32 @@
   font-size: 0;
   background: url("../img/logo-htmlacademy.svg") no-repeat top right;
   vertical-align: middle;
+}
+
+@media @tablet-widths {
+  .page-footer .container {
+    .clearfix();
+  }
+
+  .page-footer .logo {
+    position: static;
+    float: left;
+    display: block;
+    width: 33.333333%;
+    transform: none;
+    text-align: left;
+  }
+
+  .page-footer .social-list {
+    float: left;
+    width: 33.333333%;
+  }
+
+  .page-footer__copyright {
+    float: right;
+    width: auto; /* ?????????????? */
+    padding-left: 0;
+    border: 0;
+    text-align: right;
+  }
 }
