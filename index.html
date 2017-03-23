@@ -10,39 +10,37 @@
     <!-- page-header -->
     <header class="page-header">
       <div class="container  page-header__container">
-        <a class="logo">
-          <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
-        </a>
         <nav class="main-menu">
-          <button class="main-menu__button  main-menu__button--open" type="button" title="Открыть/закрыть меню">Меню</button>
-          <div class="main-menu__container">
-            <ul class="main-menu__list  main-menu__list--main">
-              <li class="main-menu__item  main-menu__item--main">
-                <a class="main-menu__link  main-menu__link--main" href="catalog.html">Каталог товаров</a>
-              </li>
-              <li class="main-menu__item  main-menu__item--main">
-                <a class="main-menu__link  main-menu__link--main" href="form.html">Вязание на заказ</a>
-              </li>
-            </ul>
+          <a class="logo">
+            <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+          </a>
+          <button class="main-menu__button  main-menu__button--close" type="button" title="Открыть/закрыть меню">Меню</button>
+          <ul class="main-menu__list  main-menu__list--main">
+            <li class="main-menu__item  main-menu__item--main">
+              <a class="main-menu__link  main-menu__link--main" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="main-menu__item  main-menu__item--main">
+              <a class="main-menu__link  main-menu__link--main" href="form.html">Вязание на заказ</a>
+            </li>
+          </ul>
 
-            <ul class="main-menu__list  main-menu__list--extra">
-              <li class="main-menu__item  main-menu__item--extra">
-                <a class="main-menu__link  main-menu__link--extra" href="#">Новые поступления</a>
-              </li>
-              <li class="main-menu__item  main-menu__item--extra">
-                <a class="main-menu__link  main-menu__link--extra" href="#">Распродажа</a>
-              </li>
-            </ul>
+          <ul class="main-menu__list  main-menu__list--extra">
+            <li class="main-menu__item  main-menu__item--extra">
+              <a class="main-menu__link  main-menu__link--extra" href="#">Новые поступления</a>
+            </li>
+            <li class="main-menu__item  main-menu__item--extra">
+              <a class="main-menu__link  main-menu__link--extra" href="#">Распродажа</a>
+            </li>
+          </ul>
 
-            <ul class="main-menu__list  main-menu__list--user">
-              <li class="main-menu__item">
-                <a class="main-menu__link  main-menu__link--user  main-menu__link--search" href="#">Поиск по сайту</a>
-              </li>
-              <li class="main-menu__item">
-                <a class="main-menu__link  main-menu__link--user  main-menu__link--cart" href="#">Корзина: пока пуста</a>
-              </li>
-            </ul>
-          </div>
+          <ul class="main-menu__list  main-menu__list--user">
+            <li class="main-menu__item">
+              <a class="main-menu__link  main-menu__link--user  main-menu__link--search" href="#">Поиск по сайту</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link  main-menu__link--user  main-menu__link--cart" href="#">Корзина: пока пуста</a>
+            </li>
+          </ul>
         </nav>
         <span class="page-header__delivery">Бесплатная доставка по России</span>
       </div>
@@ -51,7 +49,7 @@
     <main class="main-page-content">
       <div class="intro  intro--main-page">
         <div class="container">
-          <h1 class="intro__title">Милые штуки ручной  работы для дома</h1>
+          <h1 class="intro__title">Милые штуки ручной<br>работы для дома</h1>
         </div>
       </div>
       <ul class="category-list">
@@ -66,8 +64,10 @@
       <!-- product -->
       <article class="product  product--hit">
         <div class="container  product__container">
-          <h2 class="product__name">Вязаные корзинки</h2>
-          <h3 class="product__mark">Товар недели</h3>
+          <div class="product__title">
+            <h2 class="product__name">Вязаные корзинки</h2>
+            <h3 class="product__mark">Товар недели</h3>
+          </div>
           <p class="product__description">
             Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
           </p>
@@ -96,16 +96,12 @@
         <div class="container">
           <h2 class="about-us__title">Коротко о нас:</h2>
           <ul class="about-us__features-list">
-            <div class="about-us__column">
-              <li class="about-us__feature  about-us__feature--eco">Экологически чистые материалы</li>
-              <li class="about-us__feature  about-us__feature--price">Скандинавский стиль по российской цене</li>
-              <li class="about-us__feature  about-us__feature--heart">Увеличивает лайки на фотографиях</li>
-            </div>
-            <div class="about-us__column">
-              <li class="about-us__feature  about-us__feature--knitting">Связано вручную с любовью и умилением</li>
-              <li class="about-us__feature  about-us__feature--rocket">Поддержка отечественного производителя</li>
-              <li class="about-us__feature  about-us__feature--present">Поставляется в подарочной упаковке</li>
-            </div>
+            <li class="about-us__feature  about-us__feature--eco">Экологически чистые материалы</li>
+            <li class="about-us__feature  about-us__feature--price">Скандинавский стиль по российской цене</li>
+            <li class="about-us__feature  about-us__feature--heart">Увеличивает лайки на фотографиях</li>
+            <li class="about-us__feature  about-us__feature--knitting">Связано вручную с любовью и умилением</li>
+            <li class="about-us__feature  about-us__feature--rocket">Поддержка отечественного производителя</li>
+            <li class="about-us__feature  about-us__feature--present">Поставляется в подарочной упаковке</li>
           </ul>
         </div>
       </section><!-- about-us end -->
@@ -158,7 +154,7 @@
       </section><!-- contacts end -->
 
       <div class="page-footer__bottom">
-        <div class="container">
+        <div class="container  page-footer__container">
           <a class="logo">
             <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
           </a>
@@ -195,5 +191,7 @@
       </form>
     </div><!-- modal add-to-cart end -->
     <div class="modal-overlay"></div>
+
+    <script src="js/menu.js"></script>
   </body>
 </html>

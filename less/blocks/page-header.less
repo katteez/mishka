@@ -1,28 +1,22 @@
-.page-header {
-  &__container {
-    .clearfix();
-    position: relative;
-    border-top: 1px solid @border-extra-color;
-  }
+.page-header__container {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid @border-extra-color;
 }
 
 .page-header__delivery {
-  position: absolute;
-  bottom: 0;
-  right: 50px;
-  transform: translateY(100%);
   display: none;
-  padding-top: 13px;
 }
 
 @media @tablet-widths {
-  .page-header {
-    &__container {
-      border: 0;
-    }
+  .page-header__container {
+    border: 0;
   }
 
   .page-header__delivery {
+    align-self: flex-end;
     display: block;
+    margin-bottom: -37px;
+    padding-top: 13px;
   }
 }

@@ -2,16 +2,17 @@
   margin-bottom: 30px;
   padding-top: 24px;
   padding-bottom: 32px;
-  border: 1px solid @border-extra-color;
 }
 
 .video-block__container {
   padding: 0 33px;
+  border: 1px solid @border-extra-color;
 }
 
 .video-block__title {
   margin: 0;
   margin-bottom: 25px;
+  padding-top: 25px;
   padding-left: 57px;
   font-size: 17px;
   line-height: 24px;
@@ -20,11 +21,14 @@
 }
 
 .video-block__video {
-  display: block;
   width: 260px;
   height: 150px;
-  margin-bottom: 26px;
   background: #85c2b3 url("../img/video-mobile@1x.jpg") no-repeat;
+}
+
+.video-block__description {
+  padding-top: 26px;
+  padding-bottom: 32px;
 }
 
 .video-block__text {
@@ -36,24 +40,33 @@
 
 @media @tablet-widths {
   .video-block {
-    position: relative;
+    display: flex;
+    flex-direction: column;
     padding-top: 0;
   }
 
+  .video-block__container:first-child {
+    border-bottom: none;
+  }
+
   .video-block__title {
-    position: absolute;
-    top: 500px;
+    padding-top: 38px;
     font-size: 20px;
   }
 
   .video-block__video {
+    order: -1;
     width: 100%;
     height: 455px;
     background-color: #e6e6e6;
   }
 
+  .video-block__description {
+    padding-bottom: 45px;
+    border-top: none;
+  }
+
   .video-block__text {
-    padding-top: 70px;
     font-size: 15px;
     line-height: 30px;
   }
@@ -61,7 +74,8 @@
 
 @media @desktop-widths {
   .video-block {
-    .clearfix();
+    flex-wrap: wrap;
+    height: 455px;
   }
 
   .video-block__container {
@@ -70,23 +84,18 @@
   }
 
   .video-block__title {
-    top: 90px;
-    left: 770px;
     width: 160px;
+    padding-top: 90px;
     padding-left: 0;
   }
 
   .video-block__video {
-    float: left;
     width: 682px;
   }
 
   .video-block__description {
-    float: right;
     width: 220px;
-  }
-
-  .video-block__text {
-    padding-top: 175px;
+    padding-top: 4px;
+    padding-bottom: 59px;
   }
 }

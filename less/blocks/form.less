@@ -1,16 +1,21 @@
-.form__field-group {
+.form fieldset {
   margin: 0;
+  padding: 0 30px;
+  border: none;
+}
+.form__field-group {
+  margin: 0 auto;
   margin-bottom: 23px;
   padding: 0;
   border: 0;
 
-  &:last-of-type {
+  /* &:last-of-type {
     margin-bottom: 16px;
-  }
+  } */
 
-  &--margin {
+  /* &--margin {
     padding-top: 7px;
-  }
+  } */
 }
 
 .form__field-group *:last-child {
@@ -26,13 +31,13 @@
   color: @contrast-color;
   text-transform: uppercase;
 
-  &--big-margin {
+  /* &--big-margin {
     margin-bottom: 27px;
-  }
+  } */
 
-  &--small-margin {
+  /* &--small-margin {
     margin-bottom: 15px;
-  }
+  } */
 }
 
 .form label {
@@ -107,8 +112,8 @@
 }
 
 @media @tablet-widths {
-  .form {
-    .clearfix();
+  .form fieldset {
+    padding: 0 50px;
   }
 
   .form label {
@@ -116,6 +121,7 @@
   }
 
   .form__field-group {
+    display: flex;
     margin-bottom: 0;
     padding: 40px 0;
     font-size: 0;
@@ -123,11 +129,16 @@
     &:nth-of-type(5) {
       padding-top: 0;
     }
+
+    &--background,
+    &--background input {
+      background-color: @background-color;
+    }
   }
 
-  .form__field-group:last-of-type {
+  /* .form__field-group:last-of-type {
     margin-bottom: 50px;
-  }
+  } */
 
   .form__field-group-title {
     display: inline-block;
@@ -148,29 +159,31 @@
   }
 
   .form__text-field-block{
-    .clearfix();
+    display: flex;
   }
 
   .form__text-field-block label {
-    float: left;
     width: 20%;
     margin-right: 25px;
   }
 
   .form__text-field {
     &--name {
-      float: left;
       width: 74%;
     }
   }
 
+  .form__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .form__button {
-    float: left;
+    order: -1;
     width: 230px;
   }
 
   .form__field-mark {
-    float: right;
     width: 50%;
     padding-top: 16px;
     text-align: right;

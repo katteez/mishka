@@ -1,6 +1,5 @@
 .category-list {
   .ul-reset();
-  margin-top: 46px;
 }
 
 .category-list__link {
@@ -48,17 +47,15 @@
 
 @media @tablet-widths {
   .category-list {
-    .clearfix();
+    display: flex;
+    padding: 0 50px;
   }
 
   .category-list__item {
-    .clearfix();
-    float: left;
     width: 50%;
   }
 
   .category-list__link {
-    float: left;
     width: calc(~"100% - 130px");
     padding-left: 36px;
     padding-right: 94px;
