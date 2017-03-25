@@ -20,10 +20,6 @@
   text-transform: uppercase;
 }
 
-.form__controls *:last-child {
-  margin-bottom: 0;
-}
-
 .form__label {
   display: block;
   font-size: 17px;
@@ -33,10 +29,18 @@
 
 .form__radio-button-block  {
   margin-bottom: 3px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .form__checkbox-block {
   margin-bottom: 17px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .form__radio-button,
@@ -54,6 +58,10 @@
 .form__text-field-block {
   margin-top: 4px;
   margin-bottom: 22px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .form__text-field {
