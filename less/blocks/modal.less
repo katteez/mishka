@@ -6,8 +6,45 @@
   z-index: 100;
   display: none;
   width: 320px;
-  height: 337px;
-  border-top: 1px solid #c7c7c7;
+  min-height: 337px;
+  padding: 0 30px;
+  padding-top: 36px;
+  padding-bottom: 46px;
+  border: 1px solid #c6c6c6;
+  border-left: none;
+  border-right: none;
+  box-sizing: border-box;
   background-color: #ffffff;
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+}
+
+.modal--show {
+  display: block;
+}
+
+.modal__title {
+  .block-title-text();
+  width: 160px;
+  margin: 0 auto;
+  margin-bottom: 8px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media @tablet-widths {
+  .modal {
+    width: 568px;
+    padding-top: 30px;
+    padding-left: 108px;
+    padding-right: 108px;
+    border-left: 1px solid #c6c6c6;
+    border-right: 1px solid #c6c6c6;
+  }
+
+  .modal__title {
+    width: 100%;
+    margin-bottom: 18px;
+    font-size: 29px; /* вместо 30px, чтобы не делать абсолютом */
+    line-height: 57px;
+  }
 }

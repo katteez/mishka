@@ -1,46 +1,30 @@
-.form fieldset {
+.form__fieldset {
   margin: 0;
   padding: 0 30px;
   border: none;
 }
+
 .form__field-group {
   margin: 0 auto;
   margin-bottom: 23px;
   padding: 0;
   border: 0;
-
-  /* &:last-of-type {
-    margin-bottom: 16px;
-  } */
-
-  /* &--margin {
-    padding-top: 7px;
-  } */
-}
-
-.form__field-group *:last-child {
-  margin-bottom: 0;
 }
 
 .form__field-group-title {
-  display: inline-block;
   margin-bottom: 22px;
   font-size: 17px;
   line-height: 16px;
   font-family: "Open Sans Bold", "Arial", sans-serif;
   color: @contrast-color;
   text-transform: uppercase;
-
-  /* &--big-margin {
-    margin-bottom: 27px;
-  } */
-
-  /* &--small-margin {
-    margin-bottom: 15px;
-  } */
 }
 
-.form label {
+.form__controls *:last-child {
+  margin-bottom: 0;
+}
+
+.form__label {
   display: block;
   font-size: 17px;
   line-height: 18px;
@@ -60,8 +44,8 @@
   display: none;
 }
 
-.form__radio-button-block label,
-.form__checkbox-block label {
+.form__radio-label,
+.form__checkbox-label {
   padding: 13px;
   padding-left: 63px;
   cursor: pointer;
@@ -80,12 +64,16 @@
   font-size: 17px;
   line-height: 18px;
 
+  &:hover {
+    border-color: #62d1ba;
+  }
+
   &:focus {
     outline: 0;
   }
 }
 
-.form__text-field-block label {
+.form__text-field-block .form__label {
   margin-bottom: 12px;
 }
 
@@ -99,6 +87,10 @@
   line-height: 18px;
   resize: none;
 
+  &:hover {
+    border-color: #62d1ba;
+  }
+
   &:focus {
     outline: 0;
   }
@@ -111,12 +103,72 @@
   line-height: 16px;
 }
 
+.form__modal-text {
+  display: block;
+  margin-bottom: 28px;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.form__modal-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 31px;
+}
+
+.form__modal-label {
+  position: relative;
+  width: 82px;
+  height: 52px;
+  padding: 15px 0;
+  box-sizing: border-box;
+  font-size: 17px;
+  line-height: 16px;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  text-align: center;
+  cursor: pointer;
+
+  &::before {
+    .pseudo();
+    top: 0;
+    left: 0;
+    width: 82px;
+    height: 52px;
+    border: 2px solid #ececec;
+    box-sizing: border-box;
+  }
+
+  &:hover::before {
+    border-color: #c7c7c7;
+  }
+
+  &:active::before {
+    border-color: #63d1bb;
+  }
+}
+
+.form__modal-checkbox:checked + label::before { /* не знаю, можно ли здесь через тэг для более сокращенной записи */
+  border-color: #63d1bb;
+}
+
+.form__modal-button {
+  border: none;
+  color: #ffffff;
+  background-color: #63d1bb;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
 @media @tablet-widths {
-  .form fieldset {
+  .form__fieldset {
     padding: 0 50px;
   }
 
-  .form label {
+  .form__label {
     font-size: 19px;
   }
 
@@ -131,29 +183,28 @@
     }
 
     &--background,
-    &--background input {
+    &--background .form__input {
       background-color: @background-color;
     }
   }
 
-  /* .form__field-group:last-of-type {
-    margin-bottom: 50px;
-  } */
-
   .form__field-group-title {
-    display: inline-block;
     width: 25%;
+    margin: 0;
     vertical-align: top;
   }
 
   .form__controls {
-    display: inline-block;
     width: 75%;
     vertical-align: top;
+
+    &--checkbox {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   .form__checkbox-block {
-    display: inline-block;
     width: 49%;
     vertical-align: top;
   }
@@ -162,7 +213,7 @@
     display: flex;
   }
 
-  .form__text-field-block label {
+  .form__text-field-block .form__label {
     width: 20%;
     margin-right: 25px;
   }
@@ -187,6 +238,19 @@
     width: 50%;
     padding-top: 16px;
     text-align: right;
+  }
+
+  .form__modal-text {
+    margin-bottom: 26px;
+    font-size: 17px;
+  }
+
+  .form__modal-label {
+    width: 112px;
+
+    &::before {
+      width: 112px;
+    }
   }
 }
 
@@ -214,7 +278,7 @@
     width: 33%;
   }
 
-  .form__text-field-block label {
+  .form__text-field-block .form__label {
     float: left;
     width: 15%;
     margin-right: 25px;

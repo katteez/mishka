@@ -15,6 +15,10 @@
   color: #ffffff;
   text-decoration: none;
 
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   &::after {
     .pseudo();
     top: 50%;
@@ -48,7 +52,6 @@
 @media @tablet-widths {
   .category-list {
     display: flex;
-    padding: 0 50px;
   }
 
   .category-list__item {
@@ -56,8 +59,22 @@
   }
 
   .category-list__link {
-    width: calc(~"100% - 130px");
     padding-left: 36px;
     padding-right: 94px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      margin-bottom: -5px;
+      padding-bottom: 34px;
+      transform: translateY(-5px);
+    }
+
+    &--furnishings:hover {
+      background-color: #59d5bc;
+    }
+
+    &--toys:hover {
+      background-color: #46c1ae;
+    }
   }
 }

@@ -31,6 +31,10 @@
   &:focus {
     outline: none;
   }
+
+  &--no-js {
+    display: none;
+  }
 }
 
 .main-menu__list {
@@ -53,6 +57,11 @@
   &--extra {
     display: none;
   }
+
+  &--no-js {
+    position: static;
+    transform: none;
+  }
 }
 
 .main-menu__link {
@@ -68,6 +77,14 @@
   color: @title-text-color;
   text-decoration: none;
   background-color: #ffffff;
+
+  &:hover {
+    color: #8d8d8d;
+  }
+
+  &:active {
+    color: #cacaca;
+  }
 }
 
 @media @tablet-widths {

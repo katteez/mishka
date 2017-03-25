@@ -13,8 +13,8 @@
           <a class="logo" href="index.html">
             <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
           </a>
-          <button class="main-menu__button  main-menu__button--close" type="button" title="Открыть/закрыть меню">Меню</button>
-          <ul class="main-menu__list  main-menu__list--main">
+          <button class="main-menu__button  main-menu__button--close  main-menu__button--no-js" type="button" title="Открыть/закрыть меню">Меню</button>
+          <ul class="main-menu__list  main-menu__list--main  main-menu__list--no-js">
             <li class="main-menu__item  main-menu__item--main">
               <a class="main-menu__link  main-menu__link--main">Каталог товаров</a>
             </li>
@@ -23,7 +23,7 @@
             </li>
           </ul>
 
-          <ul class="main-menu__list  main-menu__list--extra">
+          <ul class="main-menu__list  main-menu__list--extra  main-menu__list--no-js">
             <li class="main-menu__item  main-menu__item--extra">
               <a class="main-menu__link  main-menu__link--extra" href="#">Новые поступления</a>
             </li>
@@ -32,7 +32,7 @@
             </li>
           </ul>
 
-          <ul class="main-menu__list  main-menu__list--user">
+          <ul class="main-menu__list  main-menu__list--user  main-menu__list--no-js">
             <li class="main-menu__item">
               <a class="main-menu__link  main-menu__link--user  main-menu__link--search" href="#">Поиск по сайту</a>
             </li>
@@ -66,7 +66,7 @@
             </div>
             <div class="catalog-item__footer">
               <span class="catalog-item__price">1 200 руб.</span>
-              <a class="catalog-item__cart" href="#" title="Добавить в корзину">Добавить в корзину</a>
+              <a class="catalog-item__cart  js-to-cart" href="#" title="Добавить в корзину">Добавить в корзину</a>
             </div>
           </div>
         </article>
@@ -83,7 +83,7 @@
             </div>
             <div class="catalog-item__footer">
               <span class="catalog-item__price">690 руб.</span>
-              <a class="catalog-item__cart" href="#" title="Добавить в корзину">Добавить в корзину</a>
+              <a class="catalog-item__cart  js-to-cart" href="#" title="Добавить в корзину">Добавить в корзину</a>
             </div>
           </div>
         </article>
@@ -100,7 +100,7 @@
             </div>
             <div class="catalog-item__footer">
               <span class="catalog-item__price">1 500 руб.</span>
-              <a class="catalog-item__cart" href="#" title="Добавить в корзину">Добавить в корзину</a>
+              <a class="catalog-item__cart  js-to-cart" href="#" title="Добавить в корзину">Добавить в корзину</a>
             </div>
           </div>
         </article>
@@ -146,19 +146,21 @@
     <!-- modal add-to-cart -->
     <div class="modal  modal--add-to-cart">
       <h2 class="modal__title">Добавить в корзину</h2>
-      <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
-        <p>Выберите размер:</p>
-        <input type="checkbox" id="s-size" name="s-size">
-        <label class="modal-form__label" for="s-size">S</label>
-        <input type="checkbox" id="m-size" name="m-size">
-        <label class="modal-form__label" for="m-size">M</label>
-        <input type="checkbox" id="l-size" name="l-size">
-        <label class="modal-form__label" for="l-size">L</label>
-        <button class="button  button-modal" type="submit" title="Добавить в корзину">Добавить</button>
+      <form class="form  form--modal" action="https://echo.htmlacademy.ru/" method="post">
+        <span class="form__modal-text">Выберите размер:</span>
+        <div class="form__modal-controls">
+          <input class="form__checkbox  form__modal-checkbox" type="checkbox" id="s-size" name="s-size">
+          <label class="form__modal-label" for="s-size">S</label>
+          <input class="form__checkbox  form__modal-checkbox" type="checkbox" id="m-size" name="m-size">
+          <label class="form__modal-label" for="m-size">M</label>
+          <input class="form__checkbox  form__modal-checkbox" type="checkbox" id="l-size" name="l-size">
+          <label class="form__modal-label" for="l-size">L</label>
+        </div>
+        <button class="button  form__modal-button" type="submit" title="Добавить в корзину">Добавить</button>
       </form>
     </div><!-- modal add-to-cart end -->
     <div class="modal-overlay"></div>
 
-    <script src="js/menu.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -1,5 +1,13 @@
 .catalog-item {
   margin-bottom: 30px;
+
+  &:hover .catalog-item__wrapper {
+    box-shadow: 0 6px 10px 0 @border-extra-color;
+  }
+
+  &:active .catalog-item__wrapper {
+    box-shadow: 0 3px 5px 0 @border-extra-color;
+  }
 }
 
 .catalog-item__picture {
@@ -8,7 +16,8 @@
 
 .catalog-item__wrapper {
   padding: 27px;
-  border: 1px solid @border-color;
+  border: 1px solid @border-extra-color;
+  transition: all 0.2s ease-out;
 }
 
 .catalog-item__title {
@@ -80,10 +89,6 @@
     width: 50%;
     padding-left: 28px;
     padding-right: 32px;
-  }
-
-  .catalog-item__footer {
-    /* width: calc(~"50% - 60px"); */
   }
 }
 
