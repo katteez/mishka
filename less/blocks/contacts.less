@@ -12,25 +12,22 @@
 .contacts__info {
   margin: 0;
   margin-bottom: 38px;
-  font-size: 0;
+}
+
+.contacts__data {
+  display: flex;
+  font-size: 15px;
+  line-height: 30px;
 }
 
 .contacts__term {
-  display: inline-block;
   width: 60px;
   margin-right: 19px;
-  font-size: 15px;
-  line-height: 30px;
-  vertical-align: top;
 }
 
 .contacts__definition {
-  display: inline-block;
   width: 181px;
   margin: 0;
-  font-size: 15px;
-  line-height: 30px;
-  vertical-align: top;
 
   &:first-of-type {
     margin-bottom: 30px;
@@ -59,11 +56,10 @@
   }
 
   .contacts__info {
-    .clearfix();
+    display: flex;
   }
 
   .contacts__data {
-    float: left;
     width: 50%;
   }
 
@@ -96,11 +92,8 @@
   }
 
   .contacts__info {
+    flex-direction: column;
     margin-left: 175px;
-  }
-
-  .contacts__data {
-    float: none;
   }
 
   .contacts__map {

@@ -1,6 +1,6 @@
 .about-us {
   padding-top: 30px;
-  padding-bottom: 34px;
+  padding-bottom: 35px;
   background-color: #ffffff;
 }
 
@@ -64,42 +64,50 @@
 @media @tablet-widths {
   .about-us {
     .clearfix();
-    margin-bottom: 85px;
     padding-top: 57px;
+    padding-bottom: 80px;
   }
 
   .about-us__title {
     .block-title-text--tablet();
   }
 
-  .about-us__column {
-    float: left;
-    width: 50%;
+  .about-us__features-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .about-us__feature {
-    width: 220px;
+    width: 40%;
     margin-bottom: 60px;
     font-size: 20px;
     line-height: 25px;
-  }
 
-  .about-us__column:last-child .about-us__feature {
-    width: 290px;
-  }
+    &--price {
+      order: 3;
+    }
 
-  .about-us__feature--price {
-    width: 236px;
-  }
+    &--knitting {
+      order: 2;
+    }
 
-  .about-us__column:last-child  .about-us__feature--rocket {
-    width: 300px;
+    &--rocket {
+      order: 4;
+    }
+
+    &--heart {
+      order: 5;
+    }
+
+    &--present {
+      order: 6;
+    }
   }
 }
 
 @media @desktop-widths {
   .about-us {
-    margin-bottom: 92px;
     padding-top: 66px;
   }
   .about-us__title {
@@ -108,10 +116,11 @@
   }
 
   .about-us__features-list {
+    justify-content: flex-start;
     margin-left: 175px;
   }
 
-  .about-us__column {
-    width: 40%;
+  .about-us__feature {
+    width: 37.9%;
   }
 }
