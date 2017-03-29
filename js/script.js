@@ -6,6 +6,7 @@ var btnOpenCart = document.querySelectorAll(".js-to-cart");
 var btnCloseCart = document.querySelector(".form__modal-button");
 var popupCart = document.querySelector(".modal--add-to-cart");
 var modalOverlay = document.querySelector(".modal-overlay");
+var mapContainer = document.getElementById("map");
 
 /********** Открытие/закрытие меню **********/
 var closeMenu = function () {
@@ -73,4 +74,22 @@ if (btnOpenCart && popupCart && btnCloseCart && modalOverlay) {
       }
     }
   });
+}
+
+/********** Карта **********/
+if (mapContainer) {
+  window.onload = function () {
+    var mapOptions = {
+      zoom: 16,
+      center: new google.maps.LatLng(59.9362, 30.3216)
+    }
+    var map = new google.maps.Map(mapContainer, mapOptions);
+    var image = "img/icon-map-pin.svg";
+    var myLatLng = new google.maps.LatLng(59.9362, 30.3216);
+    var beachMarker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      icon: image
+    });
+  }
 }

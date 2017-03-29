@@ -12,12 +12,22 @@
 }
 
 .form__field-group-title {
+  position: relative;
   margin-bottom: 22px;
   font-size: 17px;
   line-height: 16px;
   font-family: "Open Sans Bold", "Arial", sans-serif;
   color: @contrast-color;
   text-transform: uppercase;
+
+  &::after {
+    .pseudo();
+    top: 50%;
+    right: 0;
+    width: 70%;
+    height: 1px;
+    background-color: @contrast-color;
+  }
 }
 
 .form__label {
@@ -28,7 +38,12 @@
 }
 
 .form__radio-button-block  {
+  position: relative;
+  display: flex;
+  align-items: center;
   margin-bottom: 3px;
+  padding: 13px 0;
+  min-height: 40px;
 
   &:last-child {
     margin-bottom: 0;
@@ -36,7 +51,12 @@
 }
 
 .form__checkbox-block {
+  position: relative;
+  display: flex;
+  align-items: center;
   margin-bottom: 17px;
+  padding: 13px 0;
+  min-height: 40px;
 
   &:last-child {
     margin-bottom: 0;
@@ -50,9 +70,67 @@
 
 .form__radio-label,
 .form__checkbox-label {
-  padding: 13px;
   padding-left: 63px;
   cursor: pointer;
+}
+
+.form__radio-label {
+  &::before {
+    .pseudo();
+    top: 13px;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid @button-border-color;
+    border-radius: 50%;
+  }
+
+  &:hover::before {
+    border-color: @contrast-extra-color;
+  }
+
+  &:active::before {
+    border-color: #c7c7c7;
+  }
+}
+
+.form__radio-button:checked + .form__radio-label::after {
+  .pseudo();
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: @contrast-extra-color;
+}
+
+.form__checkbox-label {
+  &::before {
+    .pseudo();
+    top: 13px;
+    left: 0;
+    width: 54px;
+    height: 52px;
+    border: 2px solid @button-border-color;
+  }
+
+  &:hover::before {
+    border-color: @contrast-extra-color;
+  }
+
+  &:active::before {
+    border-color: #c7c7c7;
+  }
+}
+
+.form__checkbox:checked + .form__checkbox-label::after {
+  .pseudo();
+  top: 35%;
+  left: 14px;
+  width: 33px;
+  height: 22px;
+  background: url("../img/icon-tick.svg");
 }
 
 .form__text-field-block {
@@ -61,6 +139,22 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &--icon {
+    border-bottom: 2px solid #000000;
+
+    &:hover {
+      border-color: #62d1ba;
+    }
+  }
+
+  &--icon svg path {
+    fill: #d1d1d1;
+  }
+
+  &--icon:hover svg path {
+    fill: #62d1ba;
   }
 }
 
@@ -71,6 +165,10 @@
   border-bottom: 2px solid #000000;
   font-size: 17px;
   line-height: 18px;
+
+  &--icon {
+    border: none;
+  }
 
   &:hover {
     border-color: #62d1ba;
@@ -200,11 +298,14 @@
     width: 25%;
     margin: 0;
     vertical-align: top;
+
+    &::after {
+      display: none;
+    }
   }
 
   .form__controls {
     width: 75%;
-    vertical-align: top;
 
     &--checkbox {
       display: flex;

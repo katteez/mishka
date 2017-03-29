@@ -5,8 +5,8 @@
 .category-list__link {
   position: relative;
   display: block;
-  padding-top: 25px;
-  padding-bottom: 29px;
+  padding-top: 30px;
+  padding-bottom: 40px;
   padding-left: 30px;
   padding-right: 87px;
   font-size: 19px;
@@ -21,7 +21,7 @@
 
   &::after {
     .pseudo();
-    top: 50%;
+    top: 45%;
     right: 26px;
     width: 61px;
     transform: translateY(-50%);
@@ -30,8 +30,20 @@
     background-position: top center;
   }
 
+  &:hover::after{
+    opacity: 0.7;
+  }
+
+  &:active::after{
+    opacity: 0.3;
+  }
+
   &--furnishings {
     background-color: #63d1bb;
+
+    &:hover {
+      background-color: #59d5bc;
+    }
 
     &::after {
       height: 62px;
@@ -41,6 +53,10 @@
 
   &--toys {
     background-color: #56c3b2;
+
+    &:hover {
+      background-color: #46c1ae;
+    }
 
     &::after {
       height: 61px;
@@ -56,25 +72,16 @@
 
   .category-list__item {
     width: 50%;
+    background-color: #ffffff;
   }
 
   .category-list__link {
     padding-left: 36px;
     padding-right: 94px;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
 
     &:hover {
-      margin-bottom: -5px;
-      padding-bottom: 34px;
       transform: translateY(-5px);
-    }
-
-    &--furnishings:hover {
-      background-color: #59d5bc;
-    }
-
-    &--toys:hover {
-      background-color: #46c1ae;
     }
   }
 }

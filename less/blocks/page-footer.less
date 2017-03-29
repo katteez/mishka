@@ -18,8 +18,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-top: 21px;
-  padding-bottom: 36px;
+  padding: 25px 0;
   padding-left: 39px;
   padding-right: 30px;
   border-top: 1px solid #e5e5e5;
@@ -27,21 +26,37 @@
   line-height: 18px;
   font-family: "Open Sans Bold", "Arial", sans-serif;
   color: @title-text-color;
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
-.page-footer__copyright-author-link{
+.page-footer__copyright-author-link {
   width: 27px;
   height: 34px;
   margin-left: 28px;
-  font-size: 0;
-  background: url("../img/logo-htmlacademy.svg") no-repeat top right;
+}
+
+.page-footer__copyright-author-link svg {
+  fill: #63d1bb;
+
+  &:hover {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    fill: #46c1ae;
+    opacity: 0.3;
+  }
 }
 
 @media @tablet-widths {
   .page-footer__container {
     display: flex;
     justify-content: space-between;
-    align-items:flex-start;
+    align-items: center;
+    padding: 50px 0;
   }
 
   .page-footer .logo {
@@ -50,6 +65,15 @@
     width: 33.333333%;
     transform: none;
     text-align: left;
+
+    &:hover {
+      fill: #46c1ae;
+    }
+
+    &:active {
+      fill: #46c1ae;
+      opacity: 0.3;
+    }
   }
 
   .page-footer .social-list {
@@ -58,7 +82,8 @@
 
   .page-footer__copyright {
     width: 33.333333%;
-    padding-left: 0;
+    padding: 0;
+    padding-right: 30px;
     border: 0;
     text-align: right;
   }
