@@ -5,7 +5,8 @@
 
 .contacts__title {
   .block-title-text();
-  margin-bottom: 25px;
+  padding-top: 20px;
+  padding-bottom: 25px;
   font-size: 18px;
 }
 
@@ -38,12 +39,31 @@
   }
 }
 
+.contacts__map {
+  position: relative;
+  height: 457px;
+  margin-bottom: 39px;
+
+  &::before {
+    .pseudo();
+    top: 50%;
+    left: 50%;
+    width: 67px;
+    height: 100px;
+    background: url("../img/icon-map-pin.svg") no-repeat 50% 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 .contacts__map .container {
   width: 320px;
   height: 457px;
   margin: 0 auto;
-  margin-bottom: 39px;
-  background: #edeae3 url("../img/map-mobile@1x.jpg") no-repeat;
+  background: url("../img/map-mobile@1x.jpg") no-repeat center;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/map-mobile@2x.jpg");
+  }
 }
 
 @media @tablet-widths {
@@ -53,6 +73,7 @@
 
   .contacts__title {
     .block-title-text--tablet();
+    background: url("../img/icon-flag.svg") no-repeat right top;
   }
 
   .contacts__info {
@@ -66,12 +87,19 @@
   .contacts__map {
     width: 100%;
     margin-bottom: 55px;
-    background-color: #ececec;
+  }
+
+  .contacts__map {
+    background: url("../img/map-tablet@1x.jpg") no-repeat center;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/map-tablet@2x.jpg");
+    }
   }
 
   .contacts__map .container {
-    width: 320px;
-    margin: 0 auto;
+    width: 768px;
+    background: none;
   }
 
   .contacts__button {
@@ -88,7 +116,8 @@
 
   .contacts__title {
     .block-title-text--desktop();
-    margin-left: 175px;
+    padding-left: 175px;
+    background-position: left top;
   }
 
   .contacts__info {
@@ -102,6 +131,15 @@
     left: 50%;
     width: 525px;
     margin-bottom: 0;
+    background: url("../img/map-desktop@1x.jpg") no-repeat center;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/map-desktop@2x.jpg");
+    }
+  }
+
+  .contacts__map .container {
+    width: 525px;
   }
 
   .contacts__button {
