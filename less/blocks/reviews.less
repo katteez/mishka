@@ -1,7 +1,18 @@
 .reviews {
-  padding-top: 25px;
-  padding-bottom: 47px;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 67px;
   background-color: #ffffff;
+
+  &::after {
+    .pseudo();
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 23px;
+    background: url("../img/bg-zigzag-line.svg") repeat-x;
+    background-size: auto 6px;
+  }
 }
 
 .reviews__title {
@@ -31,7 +42,7 @@
 }
 
 .reviews__account {
-  margin-top: 3px;
+  margin-top: 4px;
   font-size: 17px;
   line-height: 30px;
   font-family: "Open Sans", "Arial", sans-serif;
@@ -77,21 +88,17 @@
 
 @media @tablet-widths {
   .reviews {
-    position: relative;
-    padding-top: 80px;
+    padding-top: 77px;
+    padding-bottom: 105px;
     background: #ffffff url("../img/review@1x.jpg") no-repeat;
+    background-size: 350px auto;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("../img/review@2x.jpg");
     }
 
     &::after {
-      .pseudo();
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 23px;
-      background: url("../img/bg-zigzag-line.svg") repeat-x;
+      background-size: auto 17px;
     }
   }
 
@@ -104,7 +111,7 @@
 
   .reviews__title {
     .block-title-text--tablet();
-    margin-bottom: 45px;
+    margin-bottom: 50px;
   }
 
   .reviews__item {
@@ -116,8 +123,8 @@
   }
 
   .reviews__text {
-    width: 600px;
-    margin-bottom: 55px;
+    width: 650px;
+    margin-bottom: 60px;
     font-size: 17px;
   }
 
@@ -131,6 +138,7 @@
   }
 
   .reviews__toggle {
+    width: 88px;
     border: 0;
   }
 
@@ -142,13 +150,20 @@
 
 @media @desktop-widths {
   .reviews {
+    padding-top: 7px;
+    padding-bottom: 53px;
     background-image: none;
+
+    &::after {
+      background-size: auto 23px;
+    }
   }
 
   .reviews__container {
     padding-top: 70px;
     padding-bottom: 100px;
-    background: url("../img/review@1x.jpg") no-repeat;
+    background: #ffffff url("../img/review@1x.jpg") no-repeat;
+    background-size: 350px auto;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("../img/review@2x.jpg");
@@ -166,5 +181,10 @@
 
   .reviews__text {
     width: 800px;
+    margin-bottom: 40px;
+  }
+
+  .reviews__button {
+    margin-top: 10px;
   }
 }

@@ -4,17 +4,25 @@
 
 .order__description {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 13px;
   line-height: 24px;
+}
 
-  @media @tablet-widths {
-    margin-bottom: 50px;
+@media @tablet-widths {
+  .order {
+    padding-bottom: 34px;
+  }
+  .order__description {
+    margin-bottom: 20px;
     font-size: 17px;
     line-height: 30px;
   }
-  @media @desktop-widths {
+}
+@media @desktop-widths {
+  .order__description {
     width: 65%;
     padding-left: 17%;
+    margin-bottom: 53px;
   }
 }

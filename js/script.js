@@ -54,11 +54,11 @@ btnMenu.addEventListener("click", function (event) {
 
 /******* Модальное окно "Добавление товара в корзину" *******/
 if (btnOpenCart && popupCart && btnCloseCart && modalOverlay) {
-  for (var i=0; i<btnOpenCart.length; i++){
+  for (var i = 0; i < btnOpenCart.length; i++){
     btnOpenCart[i].addEventListener("click", function (event) {
-    event.preventDefault();
-    popupCart.classList.add("modal--show");
-    modalOverlay.classList.add("modal-overlay--show");
+      event.preventDefault();
+      popupCart.classList.add("modal--show");
+      modalOverlay.classList.add("modal-overlay--show");
     });
   }
   btnCloseCart.addEventListener("click", function (event) {

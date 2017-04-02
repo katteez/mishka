@@ -111,7 +111,7 @@
 
     &--main {
       order: 2;
-      margin-bottom: -37px;
+      margin-bottom: -42px;
     }
 
     &--extra {
@@ -135,10 +135,13 @@
 
   .main-menu__link {
     padding: 0;
-    padding-top: 13px;
+    padding-top: 18px;
     border: 0;
-    font-size: 15px;
     background-color: transparent;
+
+    &--main {
+      font-size: 15px;
+    }
 
     &--user {
       min-height: 51px;
@@ -153,8 +156,17 @@
     }
 
     &--cart {
+      position: relative;
+      padding-top: 32px;
+      padding-bottom: 5px;
       padding-left: 83px;
       border-left: 1px solid @border-extra-color;
+    }
+
+    &--icon-cart {
+      position: absolute;
+      top: 34px;
+      left: 32px;
     }
   }
 }
@@ -203,17 +215,22 @@
 
   .main-menu__link {
     padding-top: 27px;
+    padding-bottom: 0;
     font-size: 17px;
 
-    &--main {
-      min-height: 60px;
+    &--main,
+    &--user {
+      min-height: 51px;
+      padding-top: 31px;
     }
 
     &--extra {
+      padding-top: 20px;
       font-size: 15px;
     }
 
     &--search {
+      padding-top: 36px;
       font-size: 0;
     }
   }

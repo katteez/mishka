@@ -1,18 +1,20 @@
 .contacts {
   margin-bottom: 39px;
-  padding-top: 40px;
+}
+
+.contacts .container {
+  margin-bottom: 11px;
 }
 
 .contacts__title {
   .block-title-text();
-  padding-top: 20px;
-  padding-bottom: 25px;
+  padding-top: 19px;
+  padding-bottom: 30px;
   font-size: 18px;
 }
 
 .contacts__info {
   margin: 0;
-  margin-bottom: 38px;
 }
 
 .contacts__data {
@@ -31,7 +33,7 @@
   margin: 0;
 
   &:first-of-type {
-    margin-bottom: 30px;
+    margin-bottom: 26px;
   }
 
   &--narrow {
@@ -43,6 +45,7 @@
   position: relative;
   height: 457px;
   margin-bottom: 39px;
+  overflow: hidden;
 
   &::before {
     .pseudo();
@@ -56,7 +59,6 @@
 }
 
 .contacts__map .container {
-  width: 320px;
   height: 457px;
   margin: 0 auto;
   background: url("../img/map-mobile@1x.jpg") no-repeat center;
@@ -73,7 +75,9 @@
 
   .contacts__title {
     .block-title-text--tablet();
-    background: url("../img/icon-flag.svg") no-repeat right top;
+    padding-top: 54px;
+    padding-bottom: 48px;
+    background: url("../img/icon-flag.svg") no-repeat right 40px;
   }
 
   .contacts__info {
@@ -84,9 +88,17 @@
     width: 50%;
   }
 
+  .contacts__definition {
+    width: 230px;
+
+    &:first-of-type {
+      margin-bottom: 45px;
+    }
+  }
+
   .contacts__map {
     width: 100%;
-    margin-bottom: 55px;
+    margin-bottom: 56px;
   }
 
   .contacts__map {
@@ -98,7 +110,7 @@
   }
 
   .contacts__map .container {
-    width: 768px;
+    width: 668px;
     background: none;
   }
 
@@ -112,17 +124,27 @@
   .contacts {
     position: relative;
     margin-bottom: 105px;
+    padding-top: 10px;
+  }
+
+  .contacts .container {
+    margin-bottom: 50px;
   }
 
   .contacts__title {
     .block-title-text--desktop();
+    padding-top: 71px;
     padding-left: 175px;
-    background-position: left top;
+    background-position: 62px 62px;
   }
 
   .contacts__info {
     flex-direction: column;
     margin-left: 175px;
+  }
+
+  .contacts__definition:first-of-type {
+    margin-bottom: 30px;
   }
 
   .contacts__map {
