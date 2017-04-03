@@ -113,6 +113,7 @@
   .main-menu {
     justify-content: space-between;
   }
+
   .main-menu__button {
     display: none;
   }
@@ -140,10 +141,10 @@
   .main-menu__item {
     &--main {
       margin-right: 36px;
+    }
 
-      &:nth-child(even) {
-        margin-right: 0;
-      }
+    &--main:nth-child(even) {
+      margin-right: 0;
     }
   }
 
@@ -208,26 +209,24 @@
   .main-menu__item {
     &--main {
       margin-right: 0;
-
-      &:nth-child(odd) .main-menu__link {
-        width: 184px;
-      }
-
-      &:nth-child(even) .main-menu__link {
-        padding-bottom: 5px;
-        padding-left: 35px;
-        border-left: 1px solid @border-extra-color;
-      }
     }
 
-    &--extra {
-      &:nth-child(odd) .main-menu__link {
-        width: 184px;
-      }
+    &--main:nth-child(odd) .main-menu__link {
+      width: 184px;
+    }
 
-      &:nth-child(even) .main-menu__link {
-        padding-left: 35px;
-      }
+    &--main:nth-child(even) .main-menu__link {
+      padding-bottom: 5px;
+      padding-left: 35px;
+      border-left: 1px solid @border-extra-color;
+    }
+
+    &--extra:nth-child(odd) .main-menu__link {
+      width: 184px;
+    }
+
+    &--extra:nth-child(even) .main-menu__link {
+      padding-left: 35px;
     }
   }
 
