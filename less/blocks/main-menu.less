@@ -93,6 +93,20 @@
   &:active svg path {
     fill: #d0f1ea;
   }
+
+  &--cart {
+    position: relative;
+  }
+
+  &--icon-search {
+    position: absolute;
+    left: 31px;
+  }
+
+  &--icon-cart {
+    position: absolute;
+    left: 28px;
+  }
 }
 
 @media @tablet-widths {
@@ -156,7 +170,6 @@
     }
 
     &--cart {
-      position: relative;
       padding-top: 32px;
       padding-bottom: 5px;
       padding-left: 83px;
@@ -164,9 +177,13 @@
     }
 
     &--icon-cart {
-      position: absolute;
       top: 34px;
       left: 32px;
+    }
+
+    &--icon-search {
+      position: static;
+      left: 0;
     }
   }
 }
@@ -197,6 +214,7 @@
       }
 
       &:nth-child(even) .main-menu__link {
+        padding-bottom: 5px;
         padding-left: 35px;
         border-left: 1px solid @border-extra-color;
       }
@@ -232,6 +250,10 @@
     &--search {
       padding-top: 36px;
       font-size: 0;
+    }
+
+    &--cart {
+      padding-bottom: 5px;
     }
   }
 }

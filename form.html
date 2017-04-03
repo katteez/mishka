@@ -40,7 +40,7 @@
           <ul class="main-menu__list  main-menu__list--user  main-menu__list--no-js">
             <li class="main-menu__item">
               <a class="main-menu__link  main-menu__link--user  main-menu__link--search" href="#">
-                <svg role="img" aria-label="Поиск" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
+                <svg class="main-menu__link--icon-search" role="img" aria-label="Поиск" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
                   <path fill="#d3d2d2" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
                 </svg>
                 Поиск по сайту
@@ -73,8 +73,8 @@
         </p>
       </div>
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
-        <fieldset class="form__fieldset">
-          <div class="form__field-group  container">
+        <fieldset class="form__fieldset  form__fieldset--types">
+          <div class="form__field-group">
             <h2 class="form__field-group-title">Тип</h2>
             <div class="form__controls">
               <div class="form__radio-button-block">
@@ -89,9 +89,9 @@
           </div>
         </fieldset>
 
-        <fieldset class="form__fieldset  form__field-group--background">
-          <div class="form__field-group  form__field-group--color  container">
-            <h2 class="form__field-group-title  form__field-group-title--color">Цвет</h2>
+        <fieldset class="form__fieldset  form__fieldset--colors  form__fieldset--background">
+          <div class="form__field-group">
+            <h2 class="form__field-group-title">Цвет</h2>
             <div class="form__controls  form__controls--checkbox">
               <div class="form__checkbox-block">
                 <input class="form__input  form__input--checkbox" type="checkbox" id="white" name="white" checked>
@@ -121,70 +121,64 @@
           </div>
         </fieldset>
 
-        <fieldset class="form__fieldset">
-          <div class="form__field-group  form__field-group--name  container">
-            <h2 class="form__field-group-title  form__field-group-title--name">ФИО</h2>
-            <div class="form__controls">
+        <fieldset class="form__fieldset  form__fieldset--name">
+          <div class="form__field-group">
+            <h2 class="form__field-group-title">ФИО</h2>
+            <div class="form__controls  form__controls--name">
               <div class="form__text-field-block">
-                <label class="form__label" for="first-name">Имя:</label>
+                <label class="form__label  form__label--name" for="first-name">Имя:</label>
                 <input class="form__input  form__input--text  form__input--name" type="text" id="first-name" name="first-name" placeholder="Введите ваше имя*" required>
               </div>
               <div class="form__text-field-block">
-                <label class="form__label" for="last-name">Фамилия:</label>
+                <label class="form__label  form__label--name" for="last-name">Фамилия:</label>
                 <input class="form__input  form__input--text  form__input--name" type="text" id="last-name" name="last-name" placeholder="Укажите фамилию*" required>
               </div>
               <div class="form__text-field-block">
-                <label class="form__label" for="middle-name">Отчество:</label>
+                <label class="form__label  form__label--name" for="middle-name">Отчество:</label>
                 <input class="form__input  form__input--text  form__input--name" type="text" id="middle-name" name="middle-name" placeholder="Отчество, если желаете">
               </div>
             </div>
           </div>
         </fieldset>
 
-        <fieldset class="form__fieldset  form__fieldset--tel  form__field-group--background">
-          <div class="form__field-group  form__field-group--tel  container">
-            <h2 class="form__field-group-title  form__field-group-title--small-margin">Тел</h2>
-            <div class="form__controls">
-              <div class="form__text-field-block  form__text-field-block--icon">
-                <input class="form__input  form__input--text  form__input--icon" type="tel" id="tel" name="tel" pattern="\+[0-9]{1} [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-                <svg role="img" aria-label="Телефон" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24.829px" height="24.333px" viewBox="0 0 24.829 24.333" enable-background="new 0 0 24.829 24.333" xml:space="preserve">
-                  <g>
-                    <g id="UrwUhy_2_">
-                      <g>
-                        <path d="M17.321,24.333c-0.371,0-0.744,0-1.115,0c-4.904-0.58-8.497-2.857-11.11-5.772C2.473,15.637,0.402,11.875,0,6.817 c0-0.453,0-0.906,0-1.358c0.091-0.921,0.544-1.55,1.067-2.086c0.65-0.666,1.63-1.522,2.522-1.553 c0.659-0.022,1.78,0.451,2.232,1.066c0.388,0.53,0.595,1.59,0.775,2.378c0.185,0.797,0.6,1.95,0.485,2.717 C6.905,9.177,5.317,9.684,4.85,10.553c1.551,3.721,4.089,6.456,7.472,8.345c0.847-0.465,1.595-1.864,2.767-1.892 c0.428-0.012,0.972,0.209,1.406,0.34c0.477,0.143,0.891,0.326,1.311,0.484c0.705,0.266,1.957,0.621,2.378,1.213 c0.433,0.61,0.681,1.608,0.581,2.231C20.571,22.508,18.538,23.877,17.321,24.333z"/>
-                      </g>
+        <fieldset class="form__fieldset  form__fieldset--tel  form__fieldset--background">
+          <div class="form__field-group  form__field-group--tel">
+            <h2 class="form__field-group-title  form__field-group-title--tel">Тел</h2>
+            <div class="form__controls  form__controls--tel">
+              <input class="form__input  form__input--text  form__input--tel" type="tel" id="tel" name="tel" pattern="\+[0-9]{1} [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+              <svg class="form__input-icon" role="img" aria-label="Телефон" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24.829px" height="24.333px" viewBox="0 0 24.829 24.333" enable-background="new 0 0 24.829 24.333" xml:space="preserve">
+                <g>
+                  <g id="UrwUhy_2_">
+                    <g>
+                      <path d="M17.321,24.333c-0.371,0-0.744,0-1.115,0c-4.904-0.58-8.497-2.857-11.11-5.772C2.473,15.637,0.402,11.875,0,6.817 c0-0.453,0-0.906,0-1.358c0.091-0.921,0.544-1.55,1.067-2.086c0.65-0.666,1.63-1.522,2.522-1.553 c0.659-0.022,1.78,0.451,2.232,1.066c0.388,0.53,0.595,1.59,0.775,2.378c0.185,0.797,0.6,1.95,0.485,2.717 C6.905,9.177,5.317,9.684,4.85,10.553c1.551,3.721,4.089,6.456,7.472,8.345c0.847-0.465,1.595-1.864,2.767-1.892 c0.428-0.012,0.972,0.209,1.406,0.34c0.477,0.143,0.891,0.326,1.311,0.484c0.705,0.266,1.957,0.621,2.378,1.213 c0.433,0.61,0.681,1.608,0.581,2.231C20.571,22.508,18.538,23.877,17.321,24.333z"/>
                     </g>
-                    <path d="M12.529,1.528c5.949,0,10.771,4.822,10.771,10.771h1.529C24.829,5.507,19.323,0,12.529,0V1.528z"/>
-                    <path d="M12.529,9.327v1.552c0.785,0,1.421,0.636,1.421,1.42h1.553C15.502,10.657,14.172,9.327,12.529,9.327z"/>
-                    <path d="M12.529,6.246c3.345,0,6.056,2.71,6.056,6.054h1.588c0-4.22-3.422-7.641-7.644-7.641V6.246z"/>
                   </g>
-                </svg>
-              </div>
+                  <path d="M12.529,1.528c5.949,0,10.771,4.822,10.771,10.771h1.529C24.829,5.507,19.323,0,12.529,0V1.528z"/>
+                  <path d="M12.529,9.327v1.552c0.785,0,1.421,0.636,1.421,1.42h1.553C15.502,10.657,14.172,9.327,12.529,9.327z"/>
+                  <path d="M12.529,6.246c3.345,0,6.056,2.71,6.056,6.054h1.588c0-4.22-3.422-7.641-7.644-7.641V6.246z"/>
+                </g>
+              </svg>
             </div>
           </div>
         </fieldset>
 
-        <fieldset class="form__fieldset  form__fieldset--email  form__field-group--background">
-          <div class="form__field-group  form__field-group--email  form__field-group--margin  container">
-            <h2 class="form__field-group-title  form__field-group-title--small-margin">E-mail</h2>
-            <div class="form__controls">
-              <div class="form__text-field-block  form__text-field-block--icon">
-                <input class="form__input  form__input--text  form__input--icon" type="email" id="email" name="email" placeholder="Ваш Email*" required>
-                <svg role="img" aria-label="Email" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-                  <path id="mail" fill="#333333" d="M28,5H4C1.791,5,0,6.792,0,9v13c0,2.209,1.791,4,4,4h24c2.209,0,4-1.791,4-4V9 C32,6.792,30.209,5,28,5z M2,10.25l6.999,5.25L2,20.75V10.25z M30,22c0,1.104-0.898,2-2,2H4c-1.103,0-2-0.896-2-2l7.832-5.875 l4.368,3.277c0.533,0.397,1.166,0.6,1.8,0.6c0.633,0,1.266-0.201,1.799-0.6l4.369-3.277L30,22L30,22z M30,20.75l-7-5.25l7-5.25 V20.75z M17.199,18.602c-0.35,0.263-0.763,0.4-1.199,0.4s-0.851-0.139-1.2-0.4L10.665,15.5l-0.833-0.625L2,9.001V9 c0-1.103,0.897-2,2-2h24c1.102,0,2,0.897,2,2L17.199,18.602z"/>
-                </svg>
-              </div>
+        <fieldset class="form__fieldset  form__fieldset--email  form__fieldset--background">
+          <div class="form__field-group">
+            <h2 class="form__field-group-title  form__field-group-title--email">E-mail</h2>
+            <div class="form__controls  form__controls--email">
+              <input class="form__input  form__input--text  form__input--email" type="email" id="email" name="email" placeholder="Ваш Email*" required>
+              <svg class="form__input-icon" role="img" aria-label="Email" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+                <path id="mail" fill="#333333" d="M28,5H4C1.791,5,0,6.792,0,9v13c0,2.209,1.791,4,4,4h24c2.209,0,4-1.791,4-4V9 C32,6.792,30.209,5,28,5z M2,10.25l6.999,5.25L2,20.75V10.25z M30,22c0,1.104-0.898,2-2,2H4c-1.103,0-2-0.896-2-2l7.832-5.875 l4.368,3.277c0.533,0.397,1.166,0.6,1.8,0.6c0.633,0,1.266-0.201,1.799-0.6l4.369-3.277L30,22L30,22z M30,20.75l-7-5.25l7-5.25 V20.75z M17.199,18.602c-0.35,0.263-0.763,0.4-1.199,0.4s-0.851-0.139-1.2-0.4L10.665,15.5l-0.833-0.625L2,9.001V9 c0-1.103,0.897-2,2-2h24c1.102,0,2,0.897,2,2L17.199,18.602z"/>
+              </svg>
             </div>
           </div>
         </fieldset>
 
-        <fieldset class="form__fieldset">
-          <div class="form__field-group  form__field-group--margin  container">
-            <h2 class="form__field-group-title  form__field-group-title--big">Доп</h2>
+        <fieldset class="form__fieldset  form__fieldset--extra-wishes">
+          <div class="form__field-group">
+            <h2 class="form__field-group-title">Доп</h2>
             <div class="form__controls">
-              <div class="form__big-text-field-block">
-                <textarea class="form__input  form__input--big-text" id="extra-wishes" name="extra-wishes" placeholder="Опишите все ваши  пожелания к заказу" rows="5"></textarea>
-              </div>
+              <textarea class="form__input  form__input--big-text" id="extra-wishes" name="extra-wishes" placeholder="Опишите все ваши  пожелания к заказу" rows="5"></textarea>
             </div>
           </div>
         </fieldset>
@@ -249,7 +243,7 @@
         </ul>
         <div class="page-footer__copyright">Разработано
           <a class="page-footer__copyright-author-link" href="https://htmlacademy.ru" target="_blank">
-            <svg role="img" aria-label="htmlacademy" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+            <svg class="page-footer__copyright-icon" role="img" aria-label="htmlacademy" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
               <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
             </svg>
           </a>

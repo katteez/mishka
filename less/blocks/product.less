@@ -1,8 +1,18 @@
 .product {
+  position: relative;
   padding-top: 27px;
   padding-bottom: 41px;
-  background: #ffffff url("../img/bg-zigzag-line.svg") repeat-x bottom;
-  background-size: auto 6px;
+
+  &::after {
+    .pseudo();
+    bottom: 0;
+    left: 50%;
+    width: 320px;
+    height: 6px;
+    background: url("../img/bg-zigzag-line.svg") no-repeat;
+    background-size: 320px 6px;
+    transform: translateX(-50%) rotate(180deg);
+  }
 }
 
 .product__name {
@@ -65,25 +75,29 @@
   margin-bottom: 26px;
   font-size: 17px;
   line-height: 24px;
-  font-weight: bold;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
   text-align: center;
 }
 
 @media @tablet-widths {
   .product {
-    position: relative;
     padding-top: 46px;
     padding-bottom: 70px;
-    background-size: auto 17px;
 
     &::before {
       .pseudo();
       top: -11px;
       left: 0;
       width: 100%;
-      height: 34px;
+      height: 24px;
       background: url("../img/bg-zigzag-fill.svg") repeat-x;
-      background-size: auto 24px;
+      background-size: 768px 26px;
+    }
+
+    &::after {
+      width: 768px;
+      height: 17px;
+      background-size: 768px 17px;
     }
   }
 
@@ -158,7 +172,13 @@
 
     &::before {
       top: -17px;
-      background-size: auto 34px;
+      background-size: 1150px 34px;
+    }
+
+    &::after {
+      width: 1150px;
+      height: 23px;
+      background-size: 1150px 23px;
     }
   }
 
