@@ -4,18 +4,24 @@
   "private": true,
   "description": "Личный проект «Мишка» от HTML Academy",
   "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "0.1.x",
     "autoprefixer": "6.7.x",
     "browser-sync": "2.18.8",
+    "css-mqpacker": "^5.0.1",
+    "del": "^2.2.2",
     "gulp": "3.9.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-imagemin": "^3.2.0",
     "gulp-less": "3.3.0",
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "6.3.0",
-    "@htmlacademy/editorconfig-cli": "0.1.x"
+    "gulp-rename": "^1.2.2",
+    "run-sequence": "^1.2.2"
   },
   "scripts": {
     "test": "editorconfig-cli",
-    "build": "gulp style",
-    "start": "gulp serve"
+    "build": "gulp build",
+    "start": "npm run build && gulp serve"
   },
   "editorconfig-cli": [
     "*.html",

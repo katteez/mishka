@@ -54,11 +54,11 @@ btnMenu.addEventListener("click", function (event) {
 
 /******* Модальное окно "Добавление товара в корзину" *******/
 if (btnOpenCart && popupCart && btnCloseCart && modalOverlay) {
-  for (var i=0; i<btnOpenCart.length; i++){
+  for (var i = 0; i < btnOpenCart.length; i++){
     btnOpenCart[i].addEventListener("click", function (event) {
-    event.preventDefault();
-    popupCart.classList.add("modal--show");
-    modalOverlay.classList.add("modal-overlay--show");
+      event.preventDefault();
+      popupCart.classList.add("modal--show");
+      modalOverlay.classList.add("modal-overlay--show");
     });
   }
   btnCloseCart.addEventListener("click", function (event) {
@@ -81,14 +81,18 @@ if (mapContainer) {
   window.onload = function () {
     var mapOptions = {
       zoom: 16,
-      center: new google.maps.LatLng(59.9362, 30.3216)
+      center: new google.maps.LatLng(59.9369, 30.3218)
     }
     var map = new google.maps.Map(mapContainer, mapOptions);
-    var image = "img/icon-map-pin.svg";
-    var myLatLng = new google.maps.LatLng(59.9362, 30.3216);
+    var image = {
+      url: "img/icon-map-pin.svg",
+      scaledSize: new google.maps.Size(100, 100)
+    }
+    var myLatLng = new google.maps.LatLng(59.9363, 30.3217);
     var beachMarker = new google.maps.Marker({
       position: myLatLng,
       map: map,
+      optimized: false,
       icon: image
     });
   }

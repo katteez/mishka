@@ -1,12 +1,23 @@
 .product {
-  padding-top: 25px;
-  padding-bottom: 38px;
-  background-color: #ffffff;
+  position: relative;
+  padding-top: 27px;
+  padding-bottom: 41px;
+
+  &::after {
+    .pseudo();
+    bottom: 0;
+    left: 50%;
+    width: 320px;
+    height: 6px;
+    background: url("../img/bg-zigzag-line.svg") no-repeat;
+    background-size: 320px 6px;
+    transform: translateX(-50%) rotate(180deg);
+  }
 }
 
 .product__name {
   .block-title-text();
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
 .product__mark {
@@ -42,7 +53,7 @@
   width: 68px;
   padding-top: 10px;
   padding-bottom: 9px;
-  padding-right: 31px;
+  padding-right: 30px;
   border-bottom: 1px solid @border-extra-color;
 }
 
@@ -61,29 +72,32 @@
 }
 
 .product__price {
-  margin-bottom: 32px;
+  margin-bottom: 26px;
   font-size: 17px;
   line-height: 24px;
-  font-weight: bold;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
   text-align: center;
 }
 
 @media @tablet-widths {
   .product {
-    position: relative;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-image: url("../img/bg-zigzag-line.svg");
-    background-repeat: repeat-x;
-    background-position: bottom;
+    padding-top: 46px;
+    padding-bottom: 70px;
 
     &::before {
       .pseudo();
-      top: -20px;
+      top: -11px;
       left: 0;
       width: 100%;
-      height: 34px;
+      height: 24px;
       background: url("../img/bg-zigzag-fill.svg") repeat-x;
+      background-size: 768px 26px;
+    }
+
+    &::after {
+      width: 768px;
+      height: 17px;
+      background-size: 768px 17px;
     }
   }
 
@@ -95,8 +109,9 @@
 
   .product__title {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     margin-bottom: 50px;
+    margin-right: 13px;
   }
 
   .product__name {
@@ -107,8 +122,10 @@
 
   .product__mark {
     width: 15%;
+    margin-top: 5px;
     margin-bottom: 0;
     text-align: center;
+    line-height: 17px;
   }
 
   .product__description,
@@ -119,13 +136,17 @@
   }
 
   .product__description {
-    margin-bottom: 30px;
+    margin-bottom: 19px;
     font-size: 17px;
     line-height: 30px;
   }
 
   .product__characteristics {
-    margin-bottom: 50px;
+    margin-bottom: 57px;
+  }
+
+  .product__characteristic {
+    padding-right: 28px;
   }
 
   .product__picture {
@@ -138,25 +159,39 @@
   }
 
   .product__price {
-    margin-bottom: 39px;
+    margin-bottom: 34px;
     font-size: 20px;
   }
 }
 
 @media @desktop-widths {
   .product {
-    padding-top: 110px;
-    padding-bottom: 82px;
+    padding-top: 123px;
+    padding-bottom: 95px;
+    background-size: auto 23px;
+
+    &::before {
+      top: -17px;
+      background-size: 1150px 34px;
+    }
+
+    &::after {
+      width: 1150px;
+      height: 23px;
+      background-size: 1150px 23px;
+    }
   }
 
   .product__title {
+    margin-right: 0;
+    margin-left: 34px;
     z-index: 2;
   }
 
   .product__name {
     .block-title-text--desktop();
     width: 90%;
-    margin-left: 72px;
+    margin-left: 41px;
   }
 
   .product__mark {
@@ -173,10 +208,14 @@
   }
 
   .product__description {
-    margin-bottom: 45px;
+    margin-bottom: 31px;
   }
 
   .product__characteristics {
-    margin-bottom: 100px;
+    margin-bottom: 111px;
+  }
+
+  .product__characteristic {
+    padding-right: 30px;
   }
 }

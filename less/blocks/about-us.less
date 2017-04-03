@@ -1,12 +1,12 @@
 .about-us {
-  padding-top: 30px;
+  padding-top: 28px;
   padding-bottom: 35px;
   background-color: #ffffff;
 }
 
 .about-us__title {
   .block-title-text();
-  margin-bottom: 32px;
+  margin-bottom: 33px;
 }
 
 .about-us__features-list {
@@ -36,6 +36,10 @@
     background-position: top center;
   }
 
+  &::after path {
+    fill: #63d1bb;
+  }
+
   &--eco::after {
     background-image: url("../img/icon-feature-1.svg");
   }
@@ -59,45 +63,64 @@
   &--present::after {
     background-image: url("../img/icon-feature-6.svg");
   }
+
+  &--narrow {
+    width: 195px;
+  }
+
+  &--wide {
+    width: 210px;
+  }
 }
 
 @media @tablet-widths {
   .about-us {
-    .clearfix();
-    padding-top: 57px;
-    padding-bottom: 80px;
+    padding-top: 48px;
+    padding-bottom: 21px;
   }
 
   .about-us__title {
     .block-title-text--tablet();
+    margin-bottom: 48px;
   }
 
   .about-us__features-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .about-us__feature {
-    width: 40%;
+    width: 35%;
     margin-bottom: 60px;
     font-size: 20px;
-    line-height: 25px;
+    line-height: 22px;
+
+    &--eco {
+      order: 1;
+      width: 230px;
+      margin-right: 100px;
+    }
 
     &--price {
       order: 3;
+      width: 235px;
+      margin-right: 100px;
     }
 
     &--knitting {
       order: 2;
+      width: 250px;
     }
 
     &--rocket {
       order: 4;
+      width: 310px;
     }
 
     &--heart {
       order: 5;
+      margin-right: 100px;
     }
 
     &--present {
@@ -108,7 +131,8 @@
 
 @media @desktop-widths {
   .about-us {
-    padding-top: 66px;
+    padding-top: 60px;
+    padding-bottom: 0;
   }
   .about-us__title {
     .block-title-text--desktop();
@@ -121,6 +145,33 @@
   }
 
   .about-us__feature {
-    width: 37.9%;
+    width: 240px;
+
+    &--eco {
+      width: 230px;
+      margin-right: 120px;
+    }
+
+    &--price {
+      width: 240px;
+      margin-right: 110px;
+    }
+
+    &--knitting {
+      width: 255px;
+    }
+
+    &--rocket {
+      width: 310px;
+    }
+
+    &--heart {
+      width: 240px;
+      margin-right: 110px;
+    }
+
+    &--present {
+      width: 240px;
+    }
   }
 }
