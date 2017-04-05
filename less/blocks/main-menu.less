@@ -146,6 +146,10 @@
     &--main:nth-child(even) {
       margin-right: 0;
     }
+
+    &--user {
+      border-left: 1px solid @border-extra-color;
+    }
   }
 
   .main-menu__link {
@@ -169,7 +173,6 @@
 
     &--search {
       min-width: 82px;
-      border-left: 1px solid @border-extra-color;
       font-size: 0;
       text-align: center;
     }
@@ -178,7 +181,6 @@
       padding-top: 32px;
       padding-bottom: 5px;
       padding-left: 83px;
-      border-left: 1px solid @border-extra-color;
     }
 
     &--icon-cart {
@@ -220,14 +222,14 @@
       margin-right: 0;
     }
 
-    &--main:nth-child(odd) .main-menu__link {
-      width: 184px;
-    }
-
-    &--main:nth-child(even) .main-menu__link {
+    &--main:nth-child(even) {
       padding-bottom: 5px;
       padding-left: 35px;
       border-left: 1px solid @border-extra-color;
+    }
+
+    &--main:nth-child(odd) .main-menu__link {
+      width: 184px;
     }
 
     &--extra:nth-child(odd) .main-menu__link {
