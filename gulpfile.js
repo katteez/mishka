@@ -1,91 +1,104 @@
-"use strict";
+import gulp from 'gulp';
+import less from 'gulp-less';
+import plumber from 'gulp-plumber';
+import postcss from 'gulp-postcss';
+import autoprefixer from 'autoprefixer';
+import mqpacker from 'mqpacker';
+import csso from 'postcss-csso';
+import rename from 'gulp-rename';
+import squoosh from 'gulp-libsquoosh';
+import { deleteAsync } from 'del';
+import browser from 'browser-sync';
 
-var gulp = require("gulp");
-var less = require("gulp-less");
-var plumber = require("gulp-plumber");
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var server = require("browser-sync").create();
-var mqpacker = require("css-mqpacker");
-var cssminify = require("gulp-csso");
-var rename = require("gulp-rename");
-var imagemin = require("gulp-imagemin");
-var run = require("run-sequence");
-var del = require("del");
+const clean = () => {
+  return deleteAsync('build');
+};
 
-gulp.task("clean", function() {
-  return del("build");
-});
-
-gulp.task("copy", function() {
-  return gulp.src([
-    "fonts/**/*.{woff,woff2}",
-    "img/**",
-    "js/**",
-    "*.html"
+const copy = (done) => {
+  gulp.src([
+    'fonts/**/*.{woff,woff2}',
+    'img/**'
   ], {
-    base: "."
+    base:'.'
   })
-    .pipe(gulp.dest("build"));
-});
+    .pipe(gulp.dest('build'))
+    done();
+};
 
-gulp.task("style", function() {
-  gulp.src("less/style.less")
+const styles = () => {
+  return gulp.src('less/style.less')
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer({browsers: [
-        "last 2 versions"
-      ]}),
-      mqpacker({
-        sort: true
-      })
+      autoprefixer(),
+      mqpacker(),
+      csso()
     ]))
-    .pipe(gulp.dest("build/css"))
-    .pipe(cssminify())
-    .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"))
-    .pipe(server.stream());
-});
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('build/css'))
+    .pipe(browser.stream());
+};
 
-gulp.task("images", function() {
-  return gulp.src("build/img/**/*.{png,jpg,gif}")
-    .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true})
-    ]))
-    .pipe(gulp.dest("build/img"));
-});
+const optimizeImages = () => {
+  return gulp.src('build/img/**/*.{png,jpg,gif}')
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'));
+};
 
-gulp.task("html:copy", function() {
-  return gulp.src("*.html")
-    .pipe(gulp.dest("build"));
-});
+const scripts = () => {
+  return gulp.src('js/*.js')
+    .pipe(gulp.dest('build/js'))
+}
 
-gulp.task("html:update", ["html:copy"], function(done) {
-  server.reload();
-  done();
-});
+const html = () => {
+  return gulp.src('*.html')
+    .pipe(gulp.dest('build'));
+}
 
-gulp.task("serve", function() {
-  server.init({
-    server: "build/",
+const server = (done) => {
+  browser.init({
+    server: {
+      baseDir: 'build/'
+    },
     notify: false,
     open: true,
     cors: true,
     ui: false
   });
+  done();
+};
 
-  gulp.watch("less/**/*.less", ["style"]);
-  gulp.watch("*.html", ["html:update"]);
-});
+const reload = (done) => {
+  browser.reload();
+  done();
+};
 
-gulp.task("build", function(done) {
-  run(
-    "clean",
-    "copy",
-    "style",
-    "images",
-    done
-  );
-});
+const watcher = () => {
+  gulp.watch('less/**/*.less', gulp.series(styles));
+  gulp.watch('js/*.js', gulp.series(scripts));
+  gulp.watch('*.html', gulp.series(html, reload));
+}
+
+export const build = gulp.series(
+  clean,
+  copy,
+  optimizeImages,
+  gulp.parallel(
+    styles,
+    scripts,
+    html
+  ),
+);
+
+export default gulp.series(
+  clean,
+  copy,
+  gulp.parallel(
+    styles,
+    scripts,
+    html
+  ),
+  gulp.series(
+    server,
+    watcher
+  ));

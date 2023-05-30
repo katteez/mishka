@@ -1,4 +1,4 @@
-# Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+# Личный проект «Мишка»
 
 * Студент: [Екатерина Зощик](https://up.htmlacademy.ru/adaptive/10/user/20096).
 * Наставник: [Максим Сёмушкин](https://up.htmlacademy.ru/adaptive/10/user/48647).
