@@ -1,0 +1,34 @@
+on:
+  push:
+    branches:
+      - master
+
+name: Project deploy
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+
+      - uses: actions/checkout@master
+        name: Checkout
+
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Test
+        run: |
+          npm run test
+
+      - name: Build
+        run: |
+          npm run build
+
+      - name: Deploy build to Github Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
